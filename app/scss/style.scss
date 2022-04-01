@@ -18,7 +18,7 @@
     display: flex;
   }
 
-  &__list-item + .menu__list-item {
+  &__list-item+.menu__list-item {
     padding-left: 35px;
   }
 
@@ -49,7 +49,7 @@
     position: relative;
   }
 
-  &__link + .user-nav__link {
+  &__link+.user-nav__link {
     padding-left: 25px;
   }
 
@@ -109,7 +109,7 @@ footer {
     margin-top: 30px;
   }
 
-  &__social-item + .footer-top__social-item {
+  &__social-item+.footer-top__social-item {
     padding-left: 18px;
   }
 
@@ -371,6 +371,7 @@ footer {
     }
 
     &:nth-child(3) {
+
       .categories__item-subtitle,
       .categories__link:hover {
         color: #ffb534;
@@ -378,6 +379,7 @@ footer {
     }
 
     &:nth-child(4) {
+
       .categories__item-subtitle,
       .categories__link:hover {
         color: #34c3ff;
@@ -798,35 +800,6 @@ footer {
     padding: 30px 40px;
   }
 
-  &__item-info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-  }
-
-  &__item-author,
-  &__item-date {
-    padding-left: 30px;
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      left: 0;
-      top: 4px;
-    }
-  }
-
-  &__item-author::before {
-    background-image: url("../images/icons/user-grey.svg");
-  }
-
-  &__item-date::before {
-    background-image: url("../images/icons/time.svg");
-  }
-
   &__item-title {
     color: $title;
     @extend %roboto-400;
@@ -846,6 +819,35 @@ footer {
     background-image: url("../images/icons/arrow.svg");
     top: 7px;
     right: -14px;
+  }
+}
+
+.blog-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  &__author,
+  &__date {
+    padding-left: 30px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 0;
+      top: 4px;
+    }
+  }
+
+  &__author::before {
+    background-image: url("../images/icons/user-grey.svg");
+  }
+
+  &__date::before {
+    background-image: url("../images/icons/time.svg");
   }
 }
 
@@ -1025,7 +1027,7 @@ footer {
   box-shadow: 0px 0px 13px 0px rgba(90, 90, 90, 0.2);
 }
 
-.irs--flat .irs-handle > i:first-child {
+.irs--flat .irs-handle>i:first-child {
   display: none;
 }
 
@@ -1057,7 +1059,7 @@ footer {
     display: flex;
     justify-content: space-between;
 
-    & + .filter-color__label {
+    &+.filter-color__label {
       padding-top: 20px;
     }
 
@@ -1070,7 +1072,7 @@ footer {
   &__input {
     @extend %checkbox-hidden;
 
-    &:checked + .filter-color__checkbox {
+    &:checked+.filter-color__checkbox {
       background-image: url("../images/icons/check-on.svg");
       background-repeat: no-repeat;
       background-position: center;
@@ -1120,11 +1122,11 @@ footer {
   &__input {
     @extend %checkbox-hidden;
 
-    &:checked + .filter-size__checkbox {
+    &:checked+.filter-size__checkbox {
       background-image: url("../images/icons/check-size.svg");
       border: none;
 
-      & + .filter-size__text {
+      &+.filter-size__text {
         color: $accent;
       }
     }
@@ -1155,7 +1157,7 @@ footer {
   &__input {
     @extend %checkbox-hidden;
 
-    &:checked + .filter-category__checkbox {
+    &:checked+.filter-category__checkbox {
       background-color: $accent;
       color: #fff;
     }
@@ -1182,7 +1184,7 @@ footer {
   &__input {
     @extend %checkbox-hidden;
 
-    &:checked + .filter-popular__checkbox {
+    &:checked+.filter-popular__checkbox {
       background-color: $accent;
       border-color: $accent;
       color: #fff;
@@ -1269,7 +1271,6 @@ footer {
 
 .product-page {
   padding: 120px 0 0;
-  
 }
 
 .product-one {
@@ -1285,6 +1286,7 @@ footer {
   &__content {
     width: 370px;
   }
+
   &__title {
     margin-bottom: 20px;
     color: $title;
@@ -1301,24 +1303,30 @@ footer {
     display: flex;
     font-size: 18px;
   }
+
   &__price-new {
     color: $title;
   }
+
   &__price-old {
     padding-left: 15px;
     text-decoration: line-through;
   }
+
   &__item-star {
     display: flex;
     align-items: center;
+
     span {
       padding-left: 8px;
       color: $title;
       font-size: 22px;
     }
   }
+
   &__item-text {
     margin-bottom: 30px;
+
     span {
       display: block;
       color: $title;
@@ -1326,6 +1334,7 @@ footer {
       font-size: 18px;
     }
   }
+
   &__item-btn {
     @extend %btn;
     margin-left: 15px;
@@ -1394,10 +1403,12 @@ footer {
   &__list {
     margin-bottom: 30px;
   }
+
   &__item {
     margin-bottom: 5px;
     display: flex;
   }
+
   &__title {
     min-width: 100px;
     color: $title;
@@ -1407,9 +1418,11 @@ footer {
     path {
       fill: $default;
     }
-    & + .product-info__link {
+
+    &+.product-info__link {
       margin-left: 15px;
     }
+
     &:hover {
       path {
         fill: $accent;
@@ -1420,10 +1433,12 @@ footer {
 
 .product-slide {
   display: flex;
+
   .slick-vertical .slick-slide {
     height: 140px;
     margin-bottom: 30px;
   }
+
   &__thumb {
     width: 140px;
     margin-right: 30px;
@@ -1441,8 +1456,10 @@ footer {
       object-fit: cover;
     }
   }
+
   &__big {
     width: 560px;
+
     img {
       width: 560px;
       height: 650px;
@@ -1454,18 +1471,22 @@ footer {
 .product-filter {
   &__color {
     margin-bottom: 25px;
+
     label {
       margin-right: 10px;
     }
   }
+
   &__color-input {
     @extend %radio-hidden;
+
     &:checked {
-      & + .product-filter__color-checkbox {
+      &+.product-filter__color-checkbox {
         border-color: $accent;
       }
     }
   }
+
   &__color-checkbox {
     width: 24px;
     height: 24px;
@@ -1473,6 +1494,7 @@ footer {
     border: 1px solid #ccccce;
     position: relative;
     display: inline-block;
+
     span {
       position: absolute;
       display: inline-block;
@@ -1482,6 +1504,7 @@ footer {
       left: 3px;
     }
   }
+
   &__color-title,
   &__size-title {
     margin-bottom: 5px;
@@ -1489,21 +1512,26 @@ footer {
     color: $title;
     @extend %roboto-400;
   }
+
   &__size {
     margin-bottom: 35px;
+
     label {
       display: inline-block;
       margin-right: 10px;
     }
   }
+
   &__size-input {
     @extend %radio-hidden;
+
     &:checked {
-      & + .product-filter__size-checkbox {
+      &+.product-filter__size-checkbox {
         border-color: $accent;
       }
     }
   }
+
   &__size-checkbox {
     padding: 4px 12px;
     border: 1px solid #ccccce;
@@ -1514,22 +1542,27 @@ footer {
 
 .product-tabs {
   padding-top: 110px;
+
   &__top {
     border-bottom: 1px solid #f0f0f0;
     margin-bottom: 40px;
     @extend %roboto-400;
     font-size: 22px;
   }
+
   &__top-item {
     display: inline-block;
     margin-bottom: 10px;
-    & + .product-tabs__top-item {
+
+    &+.product-tabs__top-item {
       margin-left: 55px;
     }
   }
+
   &__top-item--active {
     color: $title;
     position: relative;
+
     &::before {
       content: "";
       position: absolute;
@@ -1541,8 +1574,10 @@ footer {
       background-color: $accent;
     }
   }
+
   &__content-item {
     display: none;
+
     &.product-tabs__content-item--active {
       display: block;
     }
@@ -1552,6 +1587,7 @@ footer {
 .comments {
   margin-bottom: 40px;
   display: flex;
+
   &__img {
     margin-right: 30px;
     min-width: 71px;
@@ -1560,30 +1596,37 @@ footer {
     overflow: hidden;
     object-fit: cover;
   }
+
   &__content-top {
     display: flex;
     margin-bottom: 10px;
   }
+
   &__content-name {
     color: $title;
     margin-right: 13px;
     @extend %roboto-400;
   }
+
   &__content-date {
     padding-left: 13px;
     border-left: 1px solid $default;
   }
+
   &__content-star {
     margin-left: auto;
     margin-right: 0;
   }
+
   &__content-text {
     margin-bottom: 10px;
   }
+
   &__content-reply {
     display: inline-block;
     padding-left: 25px;
     position: relative;
+
     &::before {
       content: "";
       position: absolute;
@@ -1599,6 +1642,7 @@ footer {
 .comments-form {
   border-bottom: 1px solid #f0f0f0;
   padding-bottom: 60px;
+
   &__title {
     color: $title;
     font-size: 22px;
@@ -1606,6 +1650,7 @@ footer {
     padding-bottom: 10px;
     margin-bottom: 30px;
     position: relative;
+
     &::before {
       content: "";
       position: absolute;
@@ -1616,9 +1661,11 @@ footer {
       width: 50px;
     }
   }
+
   &__rating {
     margin-bottom: 30px;
   }
+
   &__rating-title {
     color: $title;
     margin-right: 60px;
@@ -1630,16 +1677,18 @@ footer {
 
   &__input {
     @extend %radio-hidden;
-    &:checked + .comments-form__radio {
+
+    &:checked+.comments-form__radio {
       path {
         fill: #ffc35b;
       }
     }
   }
 
-  &__radio{
+  &__radio {
     cursor: pointer;
-    path{
+
+    path {
       fill: $default;
     }
   }
@@ -1649,6 +1698,7 @@ footer {
     display: flex;
     justify-content: space-between;
   }
+
   &__text-input {
     width: 570px;
     display: inline-block;
@@ -1656,6 +1706,7 @@ footer {
     padding: 0 20px;
     border: 1px solid #f0f0f0;
   }
+
   &__textarea {
     border: 1px solid #f0f0f0;
     padding: 15px 20px;
@@ -1665,27 +1716,232 @@ footer {
     resize: none;
     margin-bottom: 40px;
   }
+
   &__btn {
     @extend %btn;
   }
 }
 
-.related{
+.related {
   padding: 50px 0 120px;
-  &__title{
+
+  &__title {
     margin-bottom: 50px;
   }
-  &__items{
+
+  &__items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 30px;
-    .product-item__img-box{
+
+    .product-item__img-box {
       height: auto;
     }
   }
-  .product-item__title{
+
+  .product-item__title {
     padding: 5px 0;
   }
 }
+
+.blog-page {
+  padding: 120px 0 60px;
+
+  &__item--slider {
+    .blog-page__item-box {
+      margin-top: -8px;
+    }
+  }
+
+  &__slider {
+
+    .slick-next,
+    .slick-prev {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 5;
+      height: 40px;
+      width: 40px;
+      background-color: $accent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0px 7px 20px 0px rgba(254, 62, 87, 0.3);
+
+      path {
+        fill: #fff;
+      }
+    }
+
+    .slick-disabled {
+      background-color: #fff;
+      box-shadow: 0px 7px 20px 0px rgba(168, 168, 168, 0.3);
+
+      path {
+        fill: $accent;
+      }
+    }
+
+    .slick-next {
+      right: 40px;
+    }
+
+    .slick-prev {
+      left: 40px;
+    }
+
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    width: 770px;
+    margin-right: 30px;
+  }
+
+  &__aside {
+    width: 370px;
+  }
+
+  &__item {
+    margin-bottom: 60px;
+
+    &.blog-page__item--no-image {
+      border-top: 1px solid #ececec;
+      box-shadow: 0px 20px 60px 0px rgba(202, 202, 202, 0.35);
+    }
+  }
+
+
+  &__img {
+    max-width: 770px;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__item-box {
+    border: 1px solid #ececec;
+    border-top: none;
+    padding: 40px;
+  }
+
+  &__item-title,
+  &__item-link {
+    color: $title;
+    font-size: 22px;
+    @extend %roboto-700;
+    line-height: 32px;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  .blog-box {
+    justify-content: start;
+
+    &__author {
+      margin-right: 30px;
+    }
+  }
+}
+
+.person{
+  border: 1px solid #ececec;
+  margin-bottom: 40px;
+  text-align: center;
+  padding: 40px 25px;
+  &__img{
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    margin: 0 auto 35px;
+  }
+  &__name{
+    color: $title;
+    font-size: 18px;
+    @extend %roboto-700;
+  }
+  &__position{
+    color: $accent;
+    margin-bottom: 25px;
+  }
+  &__text{
+    margin-bottom: 25px;
+  }
+  &__social-link{
+    margin: 0 8px;
+    path{
+      fill: $default;
+      transition: all .3s;
+    }
+    &:hover{
+      path{
+        fill: $accent;
+      }
+    }
+  }
+}
+
+.latest-post{
+  padding: 35px 30px 40px;
+  border: 1px solid #ececec;
+  margin-bottom: 40px;
+  &__title{
+    color: $title;
+    text-transform: uppercase;
+    @extend %roboto-400;
+    font-size: 22px;
+    margin-bottom: 35px;
+  }
+  &__item{
+    margin-bottom: 20px;
+    display: flex;
+    & + .latest-post__item{
+      border-top: 1px solid #ececec;
+      padding-top: 20px;
+    }
+  }
+  &__img-link{
+    display: block;
+    margin-right: 20px;
+    min-width: 80px;
+  }
+  &__img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+  &__title-link{
+    @extend %roboto-400;
+    font-size: 18px;
+    color: $title;
+    line-height: 28px;
+  }
+  &__date{
+    padding-left: 26px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      background-image: url('../images/icons/calendar.svg');
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
 
 @import "media";
